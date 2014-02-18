@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		166A951918AFB6D2008119EF /* BrainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 166A951818AFB6D2008119EF /* BrainModel.m */; };
 		16CD7E4918AAD3D100DA8448 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16CD7E4818AAD3D100DA8448 /* Foundation.framework */; };
 		16CD7E4B18AAD3D100DA8448 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16CD7E4A18AAD3D100DA8448 /* CoreGraphics.framework */; };
 		16CD7E4D18AAD3D100DA8448 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16CD7E4C18AAD3D100DA8448 /* UIKit.framework */; };
@@ -22,6 +23,9 @@
 		16CD7E6A18AAD3D100DA8448 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16CD7E4E18AAD3D100DA8448 /* CoreData.framework */; };
 		16CD7E7218AAD3D100DA8448 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 16CD7E7018AAD3D100DA8448 /* InfoPlist.strings */; };
 		16CD7E7418AAD3D100DA8448 /* BudgetGiftTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 16CD7E7318AAD3D100DA8448 /* BudgetGiftTests.m */; };
+		16CD7E7E18AAD40400DA8448 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16CD7E7D18AAD40400DA8448 /* Storyboard.storyboard */; };
+		16CD7E8118AAD44500DA8448 /* SelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16CD7E8018AAD44500DA8448 /* SelectViewController.m */; };
+		16CD7E8418AD9E0800DA8448 /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 16CD7E8318AD9E0800DA8448 /* CustomCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		166A951718AFB6D2008119EF /* BrainModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrainModel.h; sourceTree = "<group>"; };
+		166A951818AFB6D2008119EF /* BrainModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrainModel.m; sourceTree = "<group>"; };
 		16CD7E4518AAD3D100DA8448 /* BudgetGift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BudgetGift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		16CD7E4818AAD3D100DA8448 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		16CD7E4A18AAD3D100DA8448 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -53,6 +59,11 @@
 		16CD7E6F18AAD3D100DA8448 /* BudgetGiftTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BudgetGiftTests-Info.plist"; sourceTree = "<group>"; };
 		16CD7E7118AAD3D100DA8448 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		16CD7E7318AAD3D100DA8448 /* BudgetGiftTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BudgetGiftTests.m; sourceTree = "<group>"; };
+		16CD7E7D18AAD40400DA8448 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Storyboard.storyboard; path = ../Storyboard.storyboard; sourceTree = "<group>"; };
+		16CD7E7F18AAD44500DA8448 /* SelectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SelectViewController.h; path = ../SelectViewController.h; sourceTree = "<group>"; };
+		16CD7E8018AAD44500DA8448 /* SelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SelectViewController.m; path = ../SelectViewController.m; sourceTree = "<group>"; };
+		16CD7E8218AD9E0800DA8448 /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
+		16CD7E8318AD9E0800DA8448 /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +128,13 @@
 			children = (
 				16CD7E5918AAD3D100DA8448 /* AppDelegate.h */,
 				16CD7E5A18AAD3D100DA8448 /* AppDelegate.m */,
+				16CD7E7F18AAD44500DA8448 /* SelectViewController.h */,
+				16CD7E8018AAD44500DA8448 /* SelectViewController.m */,
+				166A951718AFB6D2008119EF /* BrainModel.h */,
+				166A951818AFB6D2008119EF /* BrainModel.m */,
+				16CD7E7D18AAD40400DA8448 /* Storyboard.storyboard */,
+				16CD7E8218AD9E0800DA8448 /* CustomCell.h */,
+				16CD7E8318AD9E0800DA8448 /* CustomCell.m */,
 				16CD7E5F18AAD3D100DA8448 /* Images.xcassets */,
 				16CD7E5C18AAD3D100DA8448 /* BudgetGift.xcdatamodeld */,
 				16CD7E5118AAD3D100DA8448 /* Supporting Files */,
@@ -230,6 +248,7 @@
 			files = (
 				16CD7E5518AAD3D100DA8448 /* InfoPlist.strings in Resources */,
 				16CD7E6018AAD3D100DA8448 /* Images.xcassets in Resources */,
+				16CD7E7E18AAD40400DA8448 /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,9 +267,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16CD7E8118AAD44500DA8448 /* SelectViewController.m in Sources */,
 				16CD7E5E18AAD3D100DA8448 /* BudgetGift.xcdatamodeld in Sources */,
+				166A951918AFB6D2008119EF /* BrainModel.m in Sources */,
 				16CD7E5B18AAD3D100DA8448 /* AppDelegate.m in Sources */,
 				16CD7E5718AAD3D100DA8448 /* main.m in Sources */,
+				16CD7E8418AD9E0800DA8448 /* CustomCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,6 +473,7 @@
 				16CD7E7918AAD3D100DA8448 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		16CD7E7A18AAD3D100DA8448 /* Build configuration list for PBXNativeTarget "BudgetGiftTests" */ = {
 			isa = XCConfigurationList;
@@ -459,6 +482,7 @@
 				16CD7E7C18AAD3D100DA8448 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
