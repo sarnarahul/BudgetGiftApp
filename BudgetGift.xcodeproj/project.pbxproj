@@ -26,6 +26,8 @@
 		16CD7E7E18AAD40400DA8448 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 16CD7E7D18AAD40400DA8448 /* Storyboard.storyboard */; };
 		16CD7E8118AAD44500DA8448 /* SelectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16CD7E8018AAD44500DA8448 /* SelectViewController.m */; };
 		16CD7E8418AD9E0800DA8448 /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 16CD7E8318AD9E0800DA8448 /* CustomCell.m */; };
+		16FCC03318B42BD9000E72D2 /* Combo.m in Sources */ = {isa = PBXBuildFile; fileRef = 16FCC03218B42BD9000E72D2 /* Combo.m */; };
+		16FCC03618B6CB1B000E72D2 /* DisplayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 16FCC03518B6CB1B000E72D2 /* DisplayViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,10 @@
 		16CD7E8018AAD44500DA8448 /* SelectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SelectViewController.m; path = ../SelectViewController.m; sourceTree = "<group>"; };
 		16CD7E8218AD9E0800DA8448 /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
 		16CD7E8318AD9E0800DA8448 /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
+		16FCC03118B42BD9000E72D2 /* Combo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Combo.h; sourceTree = "<group>"; };
+		16FCC03218B42BD9000E72D2 /* Combo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Combo.m; sourceTree = "<group>"; };
+		16FCC03418B6CB1B000E72D2 /* DisplayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisplayViewController.h; sourceTree = "<group>"; };
+		16FCC03518B6CB1B000E72D2 /* DisplayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisplayViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,7 +138,11 @@
 				16CD7E8018AAD44500DA8448 /* SelectViewController.m */,
 				166A951718AFB6D2008119EF /* BrainModel.h */,
 				166A951818AFB6D2008119EF /* BrainModel.m */,
+				16FCC03118B42BD9000E72D2 /* Combo.h */,
+				16FCC03218B42BD9000E72D2 /* Combo.m */,
 				16CD7E7D18AAD40400DA8448 /* Storyboard.storyboard */,
+				16FCC03418B6CB1B000E72D2 /* DisplayViewController.h */,
+				16FCC03518B6CB1B000E72D2 /* DisplayViewController.m */,
 				16CD7E8218AD9E0800DA8448 /* CustomCell.h */,
 				16CD7E8318AD9E0800DA8448 /* CustomCell.m */,
 				16CD7E5F18AAD3D100DA8448 /* Images.xcassets */,
@@ -270,9 +280,11 @@
 				16CD7E8118AAD44500DA8448 /* SelectViewController.m in Sources */,
 				16CD7E5E18AAD3D100DA8448 /* BudgetGift.xcdatamodeld in Sources */,
 				166A951918AFB6D2008119EF /* BrainModel.m in Sources */,
+				16FCC03318B42BD9000E72D2 /* Combo.m in Sources */,
 				16CD7E5B18AAD3D100DA8448 /* AppDelegate.m in Sources */,
 				16CD7E5718AAD3D100DA8448 /* main.m in Sources */,
 				16CD7E8418AD9E0800DA8448 /* CustomCell.m in Sources */,
+				16FCC03618B6CB1B000E72D2 /* DisplayViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

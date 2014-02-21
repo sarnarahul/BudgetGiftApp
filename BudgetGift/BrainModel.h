@@ -7,13 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Combo.h"
 
 @interface BrainModel : NSObject
 
 
 @property (strong , nonatomic) NSMutableArray *brainResults;
+@property (strong , nonatomic) NSMutableArray *combinations;
 @property (strong , nonatomic) NSNumber *totalCost;
 @property (strong , nonatomic) NSNumber *totalQuantity;
+
+@property (strong, nonatomic) Combo *combo;
 
 
 -(NSMutableArray *) getResults;

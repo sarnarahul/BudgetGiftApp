@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "CustomCell.h"
 #import "BrainModel.h"
+#import "DisplayViewController.h"
 
 
 #define ZKEY @"52ddafbe3ee659bad97fcce7c53592916a6bfd73"
