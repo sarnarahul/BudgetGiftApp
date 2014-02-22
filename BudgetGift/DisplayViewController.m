@@ -14,6 +14,16 @@
 
 @implementation DisplayViewController
 
+
+-(NSMutableArray *) myResults{
+    
+    if(_myResults == nil){
+        _myResults = [[NSMutableArray alloc] init];
+    }
+    
+    return _myResults;
+}
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -22,6 +32,9 @@
     }
     return self;
 }
+
+
+
 
 - (void)viewDidLoad
 {
@@ -33,15 +46,12 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    
     for(int i=0; i<_myResults.count;i++){
         NSLog(@"%@",[[_myResults objectAtIndex:i] objectForKey:@"styleId"]);
     }
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Table view data source
@@ -49,13 +59,13 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return _myResults.count;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 1;
+    return _myResults.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -66,6 +76,9 @@
     // Configure the cell...
     
     cell.productName.text = [[_myResults objectAtIndex:indexPath.row] objectForKey:@"productName"];
+    
+    NSLog(@"%@: %@",[[_myResults objectAtIndex:indexPath.row] objectForKey:@"styleId"],[[_myResults objectAtIndex:indexPath.row] objectForKey:@"productName"]);
+    
     cell.productPrice.text = [[_myResults objectAtIndex:indexPath.row] objectForKey:@"price"];
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{

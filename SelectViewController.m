@@ -97,10 +97,19 @@
     
     _quantiy.delegate = self;
     _amount.delegate = self;
+    
+    _quantiy.tag = 1;
+    _amount.tag = 2;
 }
 
 - (IBAction)buttonBudgetMe:(id)sender {
     
+    [self getData];
+  
+    
+}
+
+-(void) getData{
     
     NSNumberFormatter * f = [[NSNumberFormatter alloc] init];
     [f setNumberStyle:NSNumberFormatterDecimalStyle];
@@ -109,23 +118,22 @@
     
     cost = [f numberFromString:_amount.text];
     
-//    if(quant == 0){
-//        UIAlertView *myAlertView = [[UIAlertView alloc] initWithTitle:@"Zero Quantity"
-//                                                              message:@"Put Quanity More Than Zero"
-//                                                             delegate:nil
-//                                                    cancelButtonTitle:@"OK"
-//                                                    otherButtonTitles: nil];
-//        
-//        [myAlertView show];
-//        
-//    }
-//    else{
-//        average = [NSNumber numberWithFloat:[cost floatValue]/[quant floatValue]];
-//    }
+        if(quant == 0 || cost == 0){
+            UIAlertView *myAlertView = [[UIAlertView alloc] initWithTitle:@"Zero Error"
+                                                                  message:@"Put Quanity/Cost More Than Zero"
+                                                                 delegate:nil
+                                                        cancelButtonTitle:@"OK"
+                                                        otherButtonTitles: nil];
     
-    [self myBrain];
+            [myAlertView show];
     
-    [self.displayResults reloadData];
+        }
+        else{
+            
+            [self myBrain];
+            
+            [self.displayResults reloadData];
+        }
     
 }
 
@@ -152,16 +160,18 @@
     
 //    cell.productName.text = [[_myResults objectAtIndex:indexPath.row] objectForKey:@"productName"];
 //    cell.productPrice.text = [[_myResults objectAtIndex:indexPath.row] objectForKey:@"price"];
-    
-//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
-//        UIImage *img = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[[_myResults objectAtIndex:indexPath.row] objectForKey:@"thumbnailImageUrl"]]]];
-//        dispatch_async(dispatch_get_main_queue(), ^{
-//            cell.productImage.image = img;
-//        });
-//    });
 //    cell.productImage.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[[_myResults objectAtIndex:indexPath.row] objectForKey:@"thumbnailImageUrl"]]]];
+//    cell.productImage.image = [UIImage imageWithData:[NSURL URLWithString:[[[[self.myResults objectAtIndex:indexPath.row] comboList] objectAtIndex:1] objectForKey:@"thumbnailImageUrl"]]];
+//[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[[_myResults objectAtIndex:indexPath.row] objectForKey:@"thumbnailImageUrl"]]]];    
     
-
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+        UIImage *img = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[[[[self.myResults objectAtIndex:indexPath.row] comboList] objectAtIndex:1] objectForKey:@"thumbnailImageUrl"]]]];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            cell.productImage.image = img;
+        });
+    });
+    
     cell.productName.text = [NSString stringWithFormat:@"Combination: %d",indexPath.row+1];
     cell.productPrice.text = [NSString stringWithFormat:@"%@",[[self.myResults objectAtIndex:indexPath.row] totalValue]];
     
@@ -175,17 +185,24 @@
         DisplayViewController *dvc = (DisplayViewController *)segue.destinationViewController;
         
         dvc.myResults = [[self.myResults objectAtIndex:self.displayResults.indexPathForSelectedRow.row] comboList];
-        
     }
     
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     
-    [textField resignFirstResponder];
+    if([textField isEqual:_quantiy] && _quantiy.tag == 1)
+        [_amount becomeFirstResponder];
+    else{
+        [textField resignFirstResponder];
+        [self getData];
+    }
+    
+    
     
     return NO;
 }
+
 
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
